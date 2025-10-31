@@ -4,7 +4,7 @@ public class Equipos {
     protected double consumoElectrico;
     protected int usosHechos;
     protected int usosMaximos;
-    protected boolean estado;
+    protected boolean disponibilidad;
 
     public Equipos(String nombre, int id, double consumoElectrico, int usosMaximos) {
         this.nombre = nombre;
@@ -12,7 +12,7 @@ public class Equipos {
         this.consumoElectrico = consumoElectrico;
         this.usosHechos = 0;
         this.usosMaximos = usosMaximos;
-        this.estado = true;
+        this.disponibilidad = true;
     }
 
     public String getNombre() {
@@ -43,28 +43,28 @@ public class Equipos {
         return usosHechos;
     }
 
-    public void setUsosHechos(int usosHechos) {
-        this.usosHechos = usosHechos;
+    public void setUsosHechos() {
+        this.usosHechos = this.usosHechos + 1;
     }
 
     public int getUsosMaximos() {
         return usosMaximos;
     }
 
-    public void setUsosMaximos() {
-        this.usosMaximos = this.usosMaximos + 1  ; 
+    public void setUsosMaximos(int ampliacion) {
+        this.usosMaximos = this.usosMaximos + ampliacion; 
     }
 
-    public boolean getEstado() {
-        return estado;
+    public boolean getDisponibilidad() {
+        return disponibilidad;
     }
 
-    public void setEstado() {
+    public void setDisponibilidad() {
         if (this.usosHechos > this.usosMaximos) {
-            this.estado = false;
+            this.disponibilidad = false;
         }
         else {
-            this.estado = true;
+            this.disponibilidad = true;
         }
     }
     
