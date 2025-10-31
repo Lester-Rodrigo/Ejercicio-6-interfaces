@@ -1,0 +1,11 @@
+public class EquiposCampo extends Equipos implements Medible{
+
+    public EquiposCampo(String nombre, int id, double consumoElectrico, int usosMaximos) {
+        super(nombre, id, consumoElectrico, usosMaximos);
+    }
+    @Override
+    public String medicion() {
+        return "El equipo de campo " + this.nombre + " ha realizado " + this.usosHechos + " tarabajos.";
+    }
+    
+}
