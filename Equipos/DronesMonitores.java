@@ -1,7 +1,10 @@
+package Equipos;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class DronesMonitores extends Equipos implements Registrable{
+import Cotratos.Registrable;
+
+public class DronesMonitores extends Equipo implements Registrable{
     private String sector;
     private LocalDateTime fechaUltimoVuelo; 
 
@@ -13,7 +16,8 @@ public class DronesMonitores extends Equipos implements Registrable{
 
     @Override
     public String registro() {
-        return "El dron monitor " + this.nombre + " con ID " + this.id + " ha realizado " + this.usosHechos + " vuelos.";
+        return "El dron monitor " + this.nombre + " con ID " + this.id + ") ha realizado " + this.usosHechos 
+        + " vuelos en el sector " + this.sector + ".";
     }
 
     public String getSector() {

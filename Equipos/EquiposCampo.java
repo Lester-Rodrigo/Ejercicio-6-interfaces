@@ -1,4 +1,7 @@
-public class EquiposCampo extends Equipos implements Medible{
+package Equipos;
+import Cotratos.Medible;
+
+public class EquiposCampo extends Equipo implements Medible{
 
     public EquiposCampo(String nombre, int id, double consumoElectrico, int usosMaximos) {
         super(nombre, id, consumoElectrico, usosMaximos);

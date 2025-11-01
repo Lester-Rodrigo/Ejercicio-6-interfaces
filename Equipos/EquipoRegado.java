@@ -1,4 +1,7 @@
-public class EquipoRegado extends Equipos implements Accionable{
+package Equipos;
+import Cotratos.Accionable;
+
+public class EquipoRegado extends Equipo implements Accionable{
     private String sector;
 
     public EquipoRegado(String nombre, int id, double consumoElectrico, int usosMaximos, String sector) {
@@ -8,7 +11,7 @@ public class EquipoRegado extends Equipos implements Accionable{
 
     @Override
     public String accion() {
-        return "El equipo de reagado " + this.nombre + " con ID " + this.id + " ha regado el sector" + this.sector + ".";
+        return "El equipo de reagado " + this.nombre + " con ID " + this.id + ") ha regado el sector" + this.sector + ".";
     }
 
     public String getSector() {

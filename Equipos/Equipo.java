@@ -1,4 +1,6 @@
-public class Equipos {
+package Equipos;
+
+public class Equipo {
     protected String nombre;
     protected int id;
     protected double consumoElectrico;
@@ -6,7 +8,7 @@ public class Equipos {
     protected int usosMaximos;
     protected boolean disponibilidad;
 
-    public Equipos(String nombre, int id, double consumoElectrico, int usosMaximos) {
+    public Equipo(String nombre, int id, double consumoElectrico, int usosMaximos) {
         this.nombre = nombre;
         this.id = id;
         this.consumoElectrico = consumoElectrico;
