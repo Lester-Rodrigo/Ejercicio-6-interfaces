@@ -16,8 +16,8 @@ public class DronesMonitores extends Equipo implements Registrable{
 
     @Override
     public String registro() {
-        return "El dron monitor " + this.nombre + " con ID " + this.id + ") ha realizado " + this.usosHechos 
-        + " vuelos en el sector " + this.sector + ".";
+        return "El dron monitor: " + this.nombre + " con ID " + this.id + ") ha realizado " + this.usosHechos 
+        + " vuelo(s) en el sector " + this.sector + ".";
     }
 
     public String getSector() {
@@ -33,10 +33,10 @@ public class DronesMonitores extends Equipo implements Registrable{
     }
 
     public void setFechaUltimoVuelo() {
-        LocalDateTime vueloReciente = LocalDateTime.now();
+         LocalDateTime vueloReciente = LocalDateTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
         String asignarUltimoVuelo = vueloReciente.format(formato);
-        this.fechaUltimoVuelo = LocalDateTime.parse(asignarUltimoVuelo);
+        this.fechaUltimoVuelo = LocalDateTime.parse(asignarUltimoVuelo, formato);
     }
     
 }

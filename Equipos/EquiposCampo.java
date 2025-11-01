@@ -8,7 +8,7 @@ public class EquiposCampo extends Equipo implements Medible{
     }
     @Override
     public String medicion() {
-        return "El equipo de campo " + this.nombre + " ha realizado " + this.usosHechos + " tarabajos.";
+        return "El equipo de campo: " + this.nombre + " ha realizado " + this.usosHechos + " tarabajo(s).";
     }
     
 }

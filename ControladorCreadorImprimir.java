@@ -5,10 +5,6 @@ public class ControladorCreadorImprimir {
     ControladroCreador controladorCreador = new ControladroCreador();
 
     Scanner input = new Scanner(System.in);
-    //Id
-    int idAccionables = 0;
-    int idMedibles = 0;
-    int idRegistrables = 0;
     //Atributos para crear equipos
     int tipoContrato;
     int tipoEquipo;
@@ -39,14 +35,14 @@ public class ControladorCreadorImprimir {
             System.out.println("1: Equipo de Riego");
             tipoEquipo = input.nextInt();
             input.nextLine();
-            idAccionables = idAccionables + 1;
-            id = idAccionables;
             System.out.println("Ingrese el nombre del equipo: ");
             nombre = input.nextLine();
             System.out.println("Ingrese el consumo eléctrico del equipo: ");
             consumoElectrico = input.nextDouble();
             System.out.println("Ingrese los usos máximos del equipo: ");
             usosMaximos = input.nextInt();
+            System.out.println("Ingrese el id del equipo");
+            id = input.nextInt();
             controladorCreador.crearEquipo(tipoContrato, tipoEquipo, nombre, id, consumoElectrico, 
             usosHechos, usosMaximos, disponibilidad, null);
         }
@@ -55,8 +51,6 @@ public class ControladorCreadorImprimir {
              System.out.println("1: Equipo de Campo");
             tipoEquipo = input.nextInt();
             input.nextLine();
-            idMedibles = idMedibles + 1;
-            id = idMedibles;
             System.out.println("Ingrese el nombre del equipo: ");
             nombre = input.nextLine();
             System.out.println("Ingrese el sector asigando al equipo: ");
@@ -65,6 +59,8 @@ public class ControladorCreadorImprimir {
             consumoElectrico = input.nextDouble();
             System.out.println("Ingrese los usos máximos del equipo: ");
             usosMaximos = input.nextInt();
+            System.out.println("Ingrese el id del equipo");
+            id = input.nextInt();
             controladorCreador.crearEquipo(tipoContrato, tipoEquipo, nombre, id, consumoElectrico, 
             usosHechos, usosMaximos, disponibilidad, sector);
         }
@@ -73,8 +69,6 @@ public class ControladorCreadorImprimir {
             System.out.println("1: Drone de Monitoreo");
             tipoEquipo = input.nextInt(); 
             input.nextLine();
-            idRegistrables = idRegistrables + 1;
-            id = idRegistrables;
             System.out.println("Ingrese el nombre del equipo: ");
             nombre = input.nextLine();
             System.out.println("Ingrese el sector asigando al equipo: ");
@@ -83,10 +77,13 @@ public class ControladorCreadorImprimir {
             consumoElectrico = input.nextDouble();
             System.out.println("Ingrese los usos máximos del equipo: ");
             usosMaximos = input.nextInt();
+            System.out.println("Ingrese el id del equipo");
+            id = input.nextInt();
             controladorCreador.crearEquipo(tipoContrato, tipoEquipo, nombre, id, consumoElectrico, 
             usosHechos, usosMaximos, disponibilidad, sector);
         }
-        return "Equipo creado exitosamente.";
+            return "Equipo creado con éxito";
+      
     }
 
 }

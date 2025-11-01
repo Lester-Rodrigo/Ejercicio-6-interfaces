@@ -11,7 +11,7 @@ public class EquipoRegado extends Equipo implements Accionable{
 
     @Override
     public String accion() {
-        return "El equipo de reagado " + this.nombre + " con ID " + this.id + ") ha regado el sector" + this.sector + ".";
+        return "El equipo de regado: " + this.nombre + " con ID " + this.id + ") ha regado el sector" + this.sector + ".";
     }
 
     public String getSector() {
